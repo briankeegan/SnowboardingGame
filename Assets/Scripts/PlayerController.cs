@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float torqueAmount = 1f;
+    [SerializeField] float torqueAmount = 5f;
     Rigidbody2D rg2d;
     void Start()
     {
@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rg2d.AddTorque(torqueAmount);
+        }
+        // Avoid both arrows being pressed at the same time
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            rg2d.AddTorque(-torqueAmount);
         }
     }
 }
