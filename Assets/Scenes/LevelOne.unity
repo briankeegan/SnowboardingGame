@@ -476,9 +476,10 @@ GameObject:
   - component: {fileID: 631330363}
   - component: {fileID: 631330364}
   - component: {fileID: 631330365}
+  - component: {fileID: 631330366}
   m_Layer: 0
   m_Name: Boarder_Top
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,6 +565,18 @@ CircleCollider2D:
   m_Offset: {x: 0.56509423, y: 0.47401124}
   serializedVersion: 2
   m_Radius: 0.31145906
+--- !u!114 &631330366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631330362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac45fb7ab981434e889e728d467f54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829346063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1204,6 @@ GameObject:
   - component: {fileID: 918396544}
   - component: {fileID: 918396543}
   - component: {fileID: 918396542}
-  - component: {fileID: 918396548}
   m_Layer: 0
   m_Name: Skizzmot
   m_TagString: Player
@@ -1278,18 +1290,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &918396548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918396541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ac45fb7ab981434e889e728d467f54b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1222400939
 GameObject:
   m_ObjectHideFlags: 0

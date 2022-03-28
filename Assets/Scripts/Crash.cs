@@ -10,7 +10,7 @@ public class Crash : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             Debug.Log("Ouch!");
-            SceneManagement.LoadScene("GameOver");
+            SceneManager.LoadScene(0);
         }
     }
 }
