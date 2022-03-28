@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Crash : MonoBehaviour
 {
+    [SerializeField] new ParticleSystem particleSystem;
     private void Restart()
     {
         // SceneManager.LoadScene(0);
@@ -14,9 +15,10 @@ public class Crash : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            particleSystem.Play();
             Debug.Log("Ouch!");
             // Add small delay
-            Invoke("Restart", 0.5f);
+            Invoke("Restart", 01f);
         }
     }
 }
