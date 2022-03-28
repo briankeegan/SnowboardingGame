@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class Lap : MonoBehaviour
 {
+
+
+    [SerializeField] new ParticleSystem particleSystem;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Finish")
         {
+            particleSystem.Play();
             Debug.Log("Play is gonna loop around!");
             transform.position = new Vector3(0, 27, 0);
         }
