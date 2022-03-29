@@ -6,25 +6,26 @@ public class Dust : MonoBehaviour
 {
 
     // particle sysetm with get
-    ParticleSystem dustParticles;
+    [SerializeField] ParticleSystem particleSystem;
+    // ParticleSystem dustParticles;
 
-    private void Start()
-    {
-        dustParticles = GetComponent<ParticleSystem>();
-    }
+    // private void Start()
+    // {
+    //     dustParticles = GetComponent<ParticleSystem>();
+    // }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            dustParticles.Play();
+            particleSystem.Play();
         }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            dustParticles.Stop();
+            particleSystem.Stop();
         }
     }
 }

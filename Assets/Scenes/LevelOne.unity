@@ -19901,7 +19901,7 @@ ParticleSystem:
   m_GameObject: {fileID: 709541023}
   serializedVersion: 7
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -20466,7 +20466,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -20526,7 +20526,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: -0.10776901, y: -0.06994724, z: -0.07385333}
-    m_Rotation: {x: 8.864531, y: 268.88763, z: 89.58864}
+    m_Rotation: {x: 348.34283, y: 268.87778, z: 89.986855}
     m_Scale: {x: 1, y: 0, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -20725,7 +20725,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -24869,7 +24869,7 @@ SpriteShapeRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 2800000, guid: ce6706b9db8f9704da1ff81edb7f9a94, type: 3}
@@ -30029,6 +30029,7 @@ GameObject:
   - component: {fileID: 918396544}
   - component: {fileID: 918396543}
   - component: {fileID: 918396542}
+  - component: {fileID: 918396546}
   m_Layer: 0
   m_Name: Skizzmot
   m_TagString: Player
@@ -30101,6 +30102,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &918396546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918396541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbf27f5a8bf4469f81b0fbee312ce6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 709541026}
 --- !u!4 &918396547
 Transform:
   m_ObjectHideFlags: 0
