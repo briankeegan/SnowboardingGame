@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    private bool canMove = true;
     bool isOn = false;
     [SerializeField] float torqueAmount = 5f;
     [SerializeField] int forwardTorque = 50;
@@ -23,8 +24,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotatePlayer();
-        RespondToBoost();
+        if (canMove)
+        {
+
+            RotatePlayer();
+            RespondToBoost();
+        }
+    }
+
+    public void DisableController()
+    {
+        canMove = false;
+    }
+
+    public void EnableController()
+    {
+        canMove = true;
     }
 
     private void RespondToBoost()

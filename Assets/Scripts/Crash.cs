@@ -20,12 +20,14 @@ public class Crash : MonoBehaviour
     {
         // SceneManager.LoadScene(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindObjectOfType<PlayerController>().EnableController();
         hasPlayed = false;
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
+            FindObjectOfType<PlayerController>().DisableController();
             AudioSource crashSound = GetComponent<AudioSource>();
             PlaySoundOnce(crashSound);
             particleSystem.Play();
