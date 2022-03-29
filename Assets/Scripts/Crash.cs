@@ -16,12 +16,6 @@ public class Crash : MonoBehaviour
     }
     [SerializeField] new ParticleSystem particleSystem;
 
-    AudioSource crashSound;
-
-    private void Start()
-    {
-        crashSound = GetComponent<AudioSource>();
-    }
     private void Restart()
     {
         // SceneManager.LoadScene(0);
@@ -32,7 +26,7 @@ public class Crash : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
-
+            AudioSource crashSound = GetComponent<AudioSource>();
             PlaySoundOnce(crashSound);
             particleSystem.Play();
             Debug.Log("Ouch!");
