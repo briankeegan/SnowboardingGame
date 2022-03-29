@@ -5,27 +5,28 @@ using UnityEngine;
 public class Dust : MonoBehaviour
 {
 
-    // particle sysetm with get
-    [SerializeField] ParticleSystem particleSystem;
-    // ParticleSystem dustParticles;
+    // This way drag and drop, 
+    // [SerializeField] ParticleSystem particleSystem;
+    ParticleSystem dustParticles;
 
-    // private void Start()
-    // {
-    //     dustParticles = GetComponent<ParticleSystem>();
-    // }
+    private void Start()
+    {
+        // This way through code.
+        dustParticles = GameObject.Find("Dust").GetComponent<ParticleSystem>();
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            particleSystem.Play();
+            dustParticles.Play();
         }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            particleSystem.Stop();
+            dustParticles.Stop();
         }
     }
 }
