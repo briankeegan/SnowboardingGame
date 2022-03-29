@@ -34,15 +34,12 @@ public class PlayerController : MonoBehaviour
         {
             if (!isOn)
             {
-                print("increase!");
                 surfaceEffector.speed += boostSpeed;
             }
             else
             {
-                print("decrease!");
                 surfaceEffector.speed -= boostSpeed;
             }
-            print(surfaceEffector.speed);
             isOn = !isOn;
         }
     }

@@ -18,4 +18,5 @@ public class Lap : MonoBehaviour
             transform.position = new Vector3(0, 27, 0);
         }
     }
+    // This is bad practice, but fuck it, I hate this game. Its just for learning!
 }
